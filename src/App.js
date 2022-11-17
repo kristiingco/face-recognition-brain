@@ -6,16 +6,18 @@ import Navigation from "./components/navigation/Navigation";
 import Rank from "./components/rank/Rank";
 
 import ParticlesBg from "particles-bg";
+import FaceRecognition from "./components/face-recognition/FaceRecognition";
 
 function App() {
   let [input, setInput] = useState("");
+  let [imageUrl, setImageUrl] = useState("");
 
   const onInputChange = (e) => {
-    console.log(e.target.value);
+    setInput(e.target.value);
   };
 
   const onButtonSubmit = () => {
-    console.log("click");
+    setImageUrl(input);
   };
   return (
     <div className='App'>
@@ -27,9 +29,7 @@ function App() {
         onButtonSubmit={onButtonSubmit}
       />
       <ParticlesBg type='cobweb' bg={true} color={"#ffffff"} />
-      {/*
-     
-      <FaceRecognition/> */}
+      <FaceRecognition imageUrl={imageUrl} />
     </div>
   );
 }
