@@ -4,7 +4,7 @@ import "./Logo.css";
 
 const Logo = () => {
   return (
-    <div classNmae='ma4 mt0'>
+    <div className='ma4 mt0'>
       <Tilt
         glareEnable={true}
         style={{
